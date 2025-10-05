@@ -1,0 +1,65 @@
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.TodoBox {
+    /* border: 2px solid black; */
+    border-radius: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    width: 400px;
+    box-shadow: 1.5px 1.5px 6px;
+}
+
+#input {
+    width: 300px;
+    height: 30px;
+    border-radius: 15px;
+    border-style: solid;
+    border-color: black;
+    padding: 10px;
+    margin-bottom: 50px;
+}
+
+#create, #delete, #access {
+    padding: 10px;
+    border-radius: 15px;
+    margin: 5px;
+}
+
+#create {
+    background-color: rgb(136, 136, 237);
+    color: white;
+    border-style: none;
+}
+
+#delete {
+    background-color: rgb(223, 25, 25);
+    color: white;
+    border-style: none;
+}
+
+#access {
+    background-color: green;
+    color: white;
+    border-style: none;
+}
+
+#horizontal-line {
+    width: 300px;
+}
+
+#create:hover,
+#delete:hover,
+#access:hover {
+    transform: scale(1.1);
+    transition: transform ease-in 0.1s;
+    cursor: pointer;
+}

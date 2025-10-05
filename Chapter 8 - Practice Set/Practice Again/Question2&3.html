@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Save Your Bookmarks</h1>
+        <input type="text">
+        <button id="add">Add</button>
+        <h2>Websites you have added to your bookmark</h2>
+        <div id="sites">
+            <br>
+        </div>
+        <br>
+    </div>
+    <script>
+        
+    let add = document.getElementById("add");
+    let sites = document.getElementById("sites");
+    let input = document.querySelector("input");
+
+    add.addEventListener("click",()=>{
+        input.value = `https://www.${input.value}.com`;
+        let url = input.value;
+        let a = document.createElement("a");
+
+        a.href = url;
+        a.textContent = url;
+        a.target = "_blank";
+
+        sites.appendChild(a);
+        sites.appendChild(document.createElement("br"));
+
+    })
+
+    </script>
+</body>
+</html>

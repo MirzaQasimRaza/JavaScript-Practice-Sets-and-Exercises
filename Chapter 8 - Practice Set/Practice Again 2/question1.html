@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="hello">Hello</button>
+    <button id="hi">Hi</button>
+    <button id="bye">Bye</button>
+    <script>
+        const hello = document.getElementById("hello");
+        const hi = document.getElementById("hi");
+        const bye = document.getElementById("bye");
+
+        hello.onclick = () => {
+            alert("Hello");
+        }
+
+        hi.onclick = () => {
+            alert("Hi");
+        }
+
+        bye.onclick = () => {
+            alert("Bye");
+        }
+    </script>
+</body>
+</html>

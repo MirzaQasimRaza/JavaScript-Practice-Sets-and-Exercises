@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="h1-container">
+            <h1>Write Website Name in the Search Bar</h1>
+        </div>
+        <input type="text" name="" id="searchbar" placeholder="Enter Website Name Only" required>
+        <button class="add">Add</button>
+        <div class="bookmark-container">
+            <h2>Bookmarks</h2>
+            <div class="websites-container">
+                <!-- Here you will append your websites -->
+            </div>
+        </div>
+    </div>
+    <script>
+
+        let searchbar = document.getElementById("searchbar");
+        let addBtn = document.querySelector(".add");
+        const webContainer = document.querySelector(".websites-container");
+
+        
+        addBtn.addEventListener("click",()=>{
+            let website = `https://www.${searchbar.value.trim()}.com`;
+            if(searchbar.value === ""){
+                alert("Please enter the website's name");
+            } else {
+                let a = document.createElement("a");
+                let breakline = document.createElement("br");
+                a.href = website;
+                a.textContent = website;
+                a.target = "_blank";
+                webContainer.appendChild(a);
+                webContainer.appendChild(breakline);
+            }
+           
+        })
+
+    </script>
+</body>
+</html>

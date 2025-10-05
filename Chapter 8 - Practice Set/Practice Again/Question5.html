@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .round {
+            border: 2px solid black;
+            border-radius: 50%;
+            height: 250px;
+            width: 250px;
+            border-bottom-left-radius: 2px;
+            border-bottom-right-radius: 2px;
+        }
+
+        .yellow {
+            background-color: yellow;
+        }
+
+        .red {
+            background-color: red;
+        }
+
+        .blue {
+            background-color: blue;
+        }
+
+        .holder {
+            
+            height: 50px;
+            width: 250px;
+            background-color: grey;
+            border: 2px solid black;
+        }
+
+        .handle {
+            height: 50px;
+            width: 250px;
+            background-color: grey;
+            border: 2px solid black;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="round"></div>
+        <div class="holder"></div>
+        <div class="handle"></div>
+    </div>
+
+    <div class="container2">
+        <div id="red" class="round"></div>
+        <div class="holder"></div>
+        <div class="handle"></div>
+
+        <div id="blue" class="round"></div>
+        <div class="holder"></div>
+        <div class="handle"></div>
+    </div>
+    
+    <script>
+
+        let addyellow = document.querySelector(".yellow");
+        let round = document.querySelector(".round");
+        let addred = document.querySelector("#red");
+        let addblue = document.querySelector("#blue");
+
+        setInterval(function(){
+            round.classList.toggle("yellow")
+        },1000)
+
+        setInterval(function(){
+            addred.classList.toggle("red");
+        },900)
+
+        setInterval(function(){
+            addblue.classList.toggle("blue");
+        },850)
+
+    </script>
+</body>
+</html>
